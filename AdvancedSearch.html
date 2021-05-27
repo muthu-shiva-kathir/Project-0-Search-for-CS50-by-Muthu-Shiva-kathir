@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Advanced Search</title>
+    <style>
+      .graybar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+  background-size: 75% 50%;
+  background: #ffffff;
+  font: 13px/27px Arial, sans-serif;
+  height: 60px;
+  width: 100%;
+}
+
+.navbar {
+  padding: 20px;
+  text-align: right;
+  size: default;
+}
+
+.navbar a {
+  margin: 0 10px;
+  color: black;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+#image {
+  height: 33px;
+  width: 92px;
+  margin: 15px;
+}
+
+body {
+  font-family: arial, sans-serif;
+}
+.row {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  margin:25px;
+}
+
+label {
+  display: block;
+  margin-right: 8px;
+}
+.label{
+    color: rgb(230, 0, 0);
+    padding: 10px;
+}
+.textbox{
+    border: 1px solid gray;
+    border-radius: 2px 2px 2px 2px;
+    padding-right: 60px;
+    margin-left:15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    box-shadow: 2px;
+    
+}
+.textbox:hover{
+    box-shadow: 2px rgb(0, 102, 255);
+}
+#search-button{
+    color: white; 
+    background-color: rgb(0, 102, 255);
+    padding: 5px;
+    font-size: 15px;
+    border: 1px solid black;
+    border-radius: 3px 3px 3px 3px;
+}
+#search-button:hover{
+    background-color: rgba(0, 102, 255, 0.75);
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="graybar">
+        <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" id=image>
+        <div class=navbar>
+          <a href="mywebpage.html">Google Search</a>
+        </div>
+      </div>
+    <div class="label">Advanced Search</div>
+    <hr>
+    <h3 style="font-weight:normal">Find pages with...</h3>
+    <form action="https://google.com/search">
+        <div class="row">
+            <input type="text" id="allwords" class="textbox" name="as_q">
+            <label for="allwords">All these words:</label>
+        </div>
+          <div class="row">
+            <input type="text" id="exact_word" class="textbox" name="as_epq">
+            <label for="exact_word">This exact word or phrase:</label>
+          </div>
+          <div class="row">
+            <input type="text" id="any_word" class="textbox" name="as_oq">
+            <label for="any_word">any of these words:</label>
+          </div>
+          <div class="row">
+            <input type="text" id="none_word" class="textbox" name="as_eq">
+            <label for="none_word">none of these words:</label>
+          </div>
+          <div class="row">
+          <input type="submit" value="Advanced search" id="search-button">
+          </div>
+        
+            
+    </form>
+</body>
+</htmL>
